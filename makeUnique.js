@@ -1,22 +1,24 @@
 // // Write your solution below:
 let string = 'hello'
-let uniqueString = ''
 
 function makeUnique (string) {
   //for-loop over string
   // if uniqueString contains [i], ignore, otherwise push to uniqueString
+  let uniqueString = ''
   for (let i = 0; i < string.length; i++) {
-    if(!uniqueString.includes([i]))
+    if(uniqueString.includes(string[i])) {
+      continue
+    } else {
     // console.log(uniqueString)
-    return uniqueString += `${[i]}`
+    uniqueString += string[i]
+   }
   }
+  return uniqueString
 }
 
-console.log(uniqueString)
+console.log(makeUnique(string))
 
-//var myString = "Hello ";
-// myString += "World";
-// myString += "!";
+
 
 
 // newArray = []
